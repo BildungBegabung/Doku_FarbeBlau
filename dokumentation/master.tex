@@ -1,0 +1,68 @@
+\documentclass{newlayout}
+%Bitte hier den enstprechenden Ort einsetzen z.B. Braunschweig und die Akademienummer
+\Akademie{Ort}{2014}{1}
+
+\usepackage[ngerman,english]{babel}
+\usepackage{misc}
+\usepackage{multicol}
+\usepackage{booktabs}
+
+\usepackage{color}% für Farben im allgemeinen
+\usepackage{colortbl}
+
+\usepackage{url}
+\usepackage{breakurl}
+
+\usepackage{units}
+
+%\usepackage{amsmath}%wird automatisch durch newlayout.cls geladen
+\usepackage{amsfonts}
+
+%%%%%Mathe-Definitionen
+\newtheorem{Def}{Definition}
+\newtheorem{Sat}{Satz}
+\newtheorem{Bew}{Beweis}
+
+%%%%Ende Mathe-Definitionen
+
+\begin{document}
+
+ %   \input{titel}
+ \setcounter{page}{3}
+
+\setcounter{tocdepth}{1}
+ \tableofcontents
+
+   \setcounter{secnumdepth}{1}
+
+
+\setcounter{page}{7}
+\setcounter{chapter}{0}
+
+%Angabe, bis zu welcher Stufe die sections im Text nummeriert werden sollen.
+      \settocdepth{2}
+
+\graphicspath{ {./pics/} }
+
+
+\course{1}{Die Farbe Blau}%%% 
+\begin{coursetitle}
+  \centerline{Die Farbe Blau} 
+  \bigskip
+  %\Large \centerline{Kursuntertitel eingeben}
+  \bigskip
+ %\includegraphics[width=.9\textwidth]{kurslogo.png}
+ \label{fig:meinbild}
+  \bigskip
+\end{coursetitle}
+
+
+\input{01_Gasentladung}
+
+
+\section*{Literaturverzeichnis}
+\bibliographystyle{jcpsty_deutsch}
+%\bibliographystyle{unsrtdin}
+\bibliography{lit2}
+
+\end{document}
