@@ -1,0 +1,65 @@
+\section{Die Schrödingergleichung}
+\authors{Lena Trahe, Lynn Meeder}
+
+Um die Struktur, Energie und Eigenschaften von Atomen und Molekülen zu beschreiben, bedient man sich der Quantenmechanik \cite{Reinhold}.
+
+\subsection{Operatoren und Eigenwertprobleme}
+
+Wendet man einen Operator $\hat{A}$ auf eine Funktion $f(x)$ an, so erhält man eine neue Funktion $g(x)$. Ein bekannter Operator ist zum Beispiel der Differentialoperator  $\frac{d}{dx}$.
+
+Für einen solchen Operator lässt sich eine Eigenwertproblem formulieren, in dem $g(x)= af(x)$ und somit folgende Gleichung gilt:
+
+\begin{equation}
+\hat{A}f(x)=af(x)
+ \label{OperatorEigenwert}
+\end{equation}
+
+Gesucht sind nun die Eigenfunktionen $f(x)$ und die Eigenwerte a, die Gleichung \ref{OperatorEigenwert} genügen.
+
+\subsection{Zeitunabhängige Schrödingergleichung}
+
+Die zeitunabhängige Schrödingergleichung ist das Eigenwertproblem des Hamilton-Operators $\hat{H}$:
+
+\begin{equation}
+\hat{H} \psi = E \psi
+\end{equation}
+
+Der Hamilton-Operator ist der Operator der Gesamtenergie $E$. Die Gesamtenergie ist die Summe aus kinetischer Energie $T$, die vom Impuls $\vec{p}$ abhängt, und potentieller Energie $V$, die vom Ort $\vec{x}$ abhängt. Analog ist der Hamilton-Operator die Summe aus den Operatoren für die kinetische und die potentielle Energie:
+
+\begin{equation}
+\hat{H}(\hat{\vec{p}}, \hat{\vec{x}}) = \hat{T} (\hat{\vec{p}}) + \hat{V} (\hat{\vec{x}})
+\label{HamiltonOperatorTV}
+\end{equation}
+
+$\hat{\vec{p}}$ ist somit der Impulsoperator und $\hat{\vec{x}}$ der Ortsoperator. Die kinetische Energie $T$ wird in der klassischen Mechanik als $\frac{\vec{p}^2}{2m}$ beschrieben. Den Impulsoperator $\hat{\vec{p}}$ stellt man in der Quantenmechanik nun dar als 
+
+\begin{equation}
+\hat{\vec{p}} = -i\hbar \left( 
+\begin{array}{c}
+\frac{\partial}{\partial x} \\ \frac{\partial}{\partial y} \\ \frac{\partial}{\partial z}
+\end{array} \right)
+\end{equation}
+
+Durch Einsetzen in den Ausdruck $\hat{T}=\frac{\hat{\vec{p}}^2}{2m}$ erhält man:
+
+\begin{equation}
+\hat{T}=-\frac{\hbar^2}{2m}  \left( \frac{\partial ^2}{\partial  x^2}+\frac{\partial ^2}{\partial  y^2}+\frac{\partial ^2}{\partial  z^2}\right)
+\end{equation}
+
+Die potentielle Energie hängt nur vom Ort $\vec{x}$ ab und ist deshalb in der Ortsdarstellung ein multiplikativer Operator: $\hat{V}(\hat{x})=\hat{V}(x)$. Die potentielle Energie eines Elektrons mit der Ladung $-e$ im Feld eines Protons mit der Ladung $+e$ beträgt $\hat{V}(x) = -\frac{1}{4 \pi \epsilon_0}\frac{e^2}{r}$. r bezeichnet die Entfernung des Elektrons zum Kern. Für das Wasserstoffatom lautet Gleichung \ref{HamiltonOperatorTV} also:
+
+\begin{equation}
+\left[ - \frac{\hbar^2}{2m}  \hat{\vec{\nabla}}^2 -\frac{1}{4 \pi \epsilon_0}\frac{e^2}{r} \right] \psi = E\psi
+\end{equation}
+
+Wobei der Operator $\hat{\vec{\nabla}}^2$ gegeben ist als:
+
+\begin{equation}
+\hat{\vec{\nabla}}^2 = \frac{\partial ^2}{\partial  x^2}+\frac{\partial ^2}{\partial  y^2}+\frac{\partial ^2}{\partial  z^2}
+\end{equation}
+
+Die diskreten Energieeigenwerte $E$ sind hier:
+
+\begin{equation}
+E_n=-\frac{m_e e^4}{2\hbar^2}\frac{1}{n^2} \:mit \: n\in \mathbb{N}
+\end{equation}
