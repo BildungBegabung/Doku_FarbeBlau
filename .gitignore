@@ -6,7 +6,8 @@
 *.out
 *.snm
 *.bak
-
+*.bbl
+*.blg
 
 
 *brief*.pdf
