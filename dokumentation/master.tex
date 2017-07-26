@@ -1,6 +1,6 @@
 \documentclass{newlayout}
 %Bitte hier den enstprechenden Ort einsetzen z.B. Braunschweig und die Akademienummer
-\Akademie{Ort}{2014}{1}
+\Akademie{Rossleben}{2017}{5}
 
 \usepackage[ngerman,english]{babel}
 \usepackage{misc}
@@ -15,6 +15,16 @@
 
 \usepackage{units}
 
+% hinzugef?gt, um Fehler 'pdfTeX error (font expansion): auto expansion is only possible with scalable' zu vermeiden
+%\usepackage{lmodern}
+\setkomafont{descriptionlabel}{\normalfont\bfseries}
+\addtokomafont{paragraph}{\normalfont}
+\usepackage{footnote}
+\usepackage[flushmargin,hang,ragged]{footmisc}
+\deffootnote{1em}{1em}{%
+\textsuperscript{\thefootnotemark\ }
+}
+
 %\usepackage{amsmath}%wird automatisch durch newlayout.cls geladen
 \usepackage{amsfonts}
 
@@ -23,6 +33,10 @@
 \newtheorem{Sat}{Satz}
 \newtheorem{Bew}{Beweis}
 
+\setlength\abovedisplayshortskip{0pt}
+\setlength\belowdisplayshortskip{0pt}
+\setlength\abovedisplayskip{3pt}
+\setlength\belowdisplayskip{3pt}
 %%%%Ende Mathe-Definitionen
 
 \begin{document}
@@ -57,8 +71,9 @@
 \end{coursetitle}
 
 
-\input{01_Gasentladung}
+%\input{01_Gasentladung}
 \input{subsecs/15_Hueckel}
+\input{subsecs/21_Phosphoreszenz}
 
 
 \section*{Literaturverzeichnis}
