@@ -1,0 +1,87 @@
+\section{Vielteilchensysteme}
+\authors{Joes Biburger, Sophia Ivaschuk}
+Vielteilchensysteme, also Systeme, die aus vielen Elektronen (und Kernen) bestehen, sind komplex, da in diesen Wechselwirkungen zwischen mehr als zwei Teilchen berücksichtigt werden müssen. Daraus ergibt sich der folgende Hamilton-Operator:
+
+\begin{equation}
+\label{Aufgespalten}
+\hat{H} = \hat{T}_{K} + \hat{T}_{e} + \hat{V}_{eK} + \hat{V}_{ee} + \hat{V}_{KK}
+\end{equation}
+$\hat{T}_{K}$ ist der Operator der kinetischen Energie der Kerne;
+$\hat{T}_{e}$ ist der Operator der kinetischen Energie der Elektronen;
+$\hat{V}_{eK}$ ist der Operator der Wechselwirkungen zwischen den Elektronen und den Kernen;
+$\hat{V}_{KK}$ ist der Operator der Wechselwirkungen zwischen den Kernen
+und $\hat{V}_{ee}$ ist der Operator der Wechselwirkungen zwischen den Elektronen.
+
+Um die einzelnen Wechselwirkungen beschreiben zu können, ersetzen wir die Operatoren in Gleichung \ref{Aufgespalten} durch die Terme:
+
+\begin{align}
+\begin{split}
+\hat{H} =& -\sum^{N}_{i} \frac{\hbar^2}{2m_e} \Delta_{i} + \sum^{N}_{\alpha<\beta}\frac{1}{4\pi \epsilon_0}\,\frac{Z_\alpha Z_\beta e^2}{|\hat{\vec{R}}_\alpha-\hat{\vec{R}}_\beta|}\\
+& - \sum^{n}_{i}\sum^{N}_{\alpha}\frac{1}{4\pi \epsilon_0}\,\frac{Z_\alpha e^2}{|\hat{\vec{x}}_i-\hat{\vec{R}}_\alpha|}\\
+& + \sum^{n}_{i<j} \frac{1}{4\pi\epsilon_0}\,\frac{e^2}{|\hat{\vec{x}}_i-\hat{\vec{x}}_j|}
+\end{split}
+\end{align}
+
+In dieser Gleichung steht $Z_{Kern}$ für die Kernladungszahl des betrachteten Kerns; $\Delta_i$ ist der Laplace-Operator; $i$ und $j$ stehen für die jeweils betrachteten Elektronen; $\alpha\,$und$\,\beta$ stehen für die jeweils betrachteten Kerne; $\vec{R}_{Kern}$ und $\vec{x}_{Elektron}$ sind die Raumkoordinaten der betreffenden Teilchen und $e$ ist der Betrag der Ladung eines Protons und eines Elektrons.
+
+Wenn wir die Gesamtenergie des Systems als Summe der kinetischen und potentiellen Energie aller Elektronen mit Ausnahme der Beiträge darstellen, die sich auf andere Elektronen oder nur auf Kerne beziehen, definieren wir eine Näherung, die das System ohne die genannten Wechselwirkungen beschreibt und mit der sich ein erster Ansatz für die Wellenfunktion finden lässt:
+
+\begin{align}
+\label{Näherung}
+\hat{H}=\sum^{N}_{i=1}\hat{h}(i)
+\end{align}
+
+$\hat{h}(i)$ ist hier der Operator für die Energie eines einzelnen Elektrons mit Index $i$. Er vernachlässigt jedoch die Elektron-Elektron-Wechselwirkungen, sowie die kinetische Energie und die Repulsion der Kerne.
+
+Als Lösung der Schrödingergleichung in dieser Näherung des Hamilton-Operators erhalten wir das Hartree-Produkt:
+\begin{align}
+\psi = \prod^{N}_{i=1} \chi_i
+\end{align}
+Das Hartree-Produkt wird aus den Spin-Orbitalen $\chi_i, \chi_j,\dots,\chi_N$ konstruiert, für die der Ortsanteil der Einteilchen-Wellenfunktion mit den Spinfunktionen $\alpha(\omega)\,$und$\,\beta(\omega)$ multipliziert wird.
+
+
+%Die Vielteilchenwellenfunktion $\psi$ wurde nun als Hartree-Produkt, das heißt als das Produkt der Spin-Orbitale $\chi_i$ dargestellt. 
+%Zusätzlich zu dieser Näherung muss die Wellenfunktion $\psi$ so aufgestellt werden, dass sie bei der Vertauschung von zwei Elektronen antisymmetrisch ist, um die Ununterscheidbarkeit von Elektronen zu berücksichtigen.
+
+Die Elektronen sind bei diesem Ansatz unterscheidbar und die Wellenfunktion ist unter Vertauschung zweier Elektronen nicht antisymmetrisch. Betrachten wir beispielsweise zwei Elektronen $e_1$ und $e_2$, wobei sich $e_1$ in $\chi_i$ und $e_2$ in $\chi_j$ befindet. Dann lautet das Hartree-Produkt:
+\begin{align}
+\psi(x_1,x_2)=\chi_i(x_1)\chi_j(x_2)
+\end{align} 
+Wenn man jetzt die Elektronen vertauscht, erhält man folgenden Ausdruck:
+\begin{align}
+\psi(x_1,x_2)=\chi_i(x_2)\chi_j(x_1)
+\end{align}
+Hier sind die Elektronen noch unterscheidbar und $\psi(x_1,x_2)$ ist nicht antisymmetrisch. Deswegen bilden wir eine Linearkombination aus beiden Hartree-Produkten:
+
+\begin{align}\label{eq:lincomb}
+\begin{split}
+\psi(x_1,x_2)=&2^{-\frac{1}{2}}[\chi_i(x_1)\chi_j(x_2)\\&-\chi_i(x_2)\chi_j(x_1)]
+\end{split}
+\end{align}
+
+$2^{-\frac{1}{2}}$ ist der Normierungsfaktor.
+Hier sind die Elektronen nicht mehr unterscheidbar und $\psi$ ist durch die Subtraktion antisymmetrisch. Außerdem verschwindet die Wellenfunktion, wenn zwei Elektronen im selben Spin-Orbital sind, sodass auch das Pauli-Prinzip befolgt wird. Allgemein lässt sich der Ansatz in Gleichung (\ref{eq:lincomb}) als Determinante einer Matrix schreiben: \cite{Szabo_Ostlund96}
+%(siehe Abb.\ref{dsafigure:beispiel}).\\\\\\
+
+\begin{align}
+\label{slatermatrix}
+\begin{split}
+& \psi(x_1,x_2,\dots,x_N) =\\
+& \frac{1}{\sqrt{N!}}\left|\begin{matrix}
+\chi_i(x_1) & \chi_j(x_1) & \dots & \chi_N(x_1)\\
+\chi_i(x_2) & \chi_j(x_2) & \dots & \chi_N(x_2)\\
+\vdots&\vdots&\ddots&\vdots\\
+\chi_i(x_N) & \chi_j(x_N) & \dots & \chi_N(x_N)\\
+\end{matrix}\right|
+\end{split}
+\end{align}
+
+In Gleichung (\ref{slatermatrix}) ist der antisymmetrische Ansatz für die Vielteilchenwellenfunktionen als Matrix von Einteilchenwellenfunktionen geschrieben. 
+Die Zeilen stehen für einzelne Elektronen und die Spalten für einzelne Spin-Orbitale. Diese Determinante wird als Slaterdeterminante bezeichnet.
+
+%\begin{dsafigure}
+% \centering
+% \includegraphics[width=\columnwidth]{Slaterdeterminante2.png}
+% 
+% \label{dsafigure:beispiel}
+%\end{dsafigure}
