@@ -1,0 +1,36 @@
+\section{Molekülorbitale}
+\authors{Isabelle Schulte-Herbrüggen, Lena Trahe, Lynn Meeder, Selin Güler}
+
+Die Molekülorbitaltheorie wird genutzt, um die Bindungen innerhalb eines Moleküls quantenmechanisch zu beschreiben. Im Folgenden wird die Theorie auf das Ammoniak- und das Methan-Molekül angewandt.
+
+\subsection{HOMO und LUMO -- freie Elektronenpaare}
+
+Farbigkeit entsteht durch die Absorption von Licht bestimmter Wellenlängen. Diese Wellenlänge wiederum hängt von der Differenz der Energien der verschiedenen Zustände, die man mit den Molekülorbitalen in Näherung beschreiben kann, ab. 
+Die Absorption des Lichtes kann man sich als Anregung eines Valenzelektrons in das nächsthöhere Energieniveau vorstellen. Dabei bezeichnet HOMO (Highest Occupied Molecular Orbital) das höchstgelegene besetzte Energieniveau und LUMO (Lowest Unoccupied Molecular Orbital) das nächsthöher gelegene, erste unbesetzte Energieniveau vor der Absorption. Mithilfe des ADF-Programms können sowohl Moleküle gezeichnet als auch Energien berechnet werden. Die Moleküle wurden mit DFT (DZ/B3LYP) berechnet und die Molekülgeometrie wurde mit einem Kraftfeld optimiert.
+
+\begin{dsafigure}
+	\centering
+	\includegraphics[width=\columnwidth]{AmmoniakLevels.png}
+	\caption{Die Energieniveaus der Molekülorbitale von $NH_3$ \cite{ADF2017authors}.}
+	\label{levels}
+\end{dsafigure}
+
+In Abbildung \ref{levels} sind die verschiedenen Energieniveaus der Molekülorbitale von Ammoniak dargestellt. Links sieht man die Atomorbitale des Stickstoffs, rechts sieht man die Atomorbitale des Wasserstoffs und in der Mitte befinden sich die Molekülorbitale des Ammoniaks. Abbildung \ref{homo} zeigt das höchste besetzte Orbital (HOMO), welches in diesem Fall eine $A_1$-Symmetrie aufweist. Es beschreibt das freie, nicht bindende Elektronenpaar des Ammoniaks. Das erste unbesetzte, energetisch über dem HOMO liegende Orbital ist das beim Ammoniak das ebenfalls $A_1$-Symmetrie aufweisende LUMO, welches in Abbildung \ref{lumo} dargestellt ist.
+
+\begin{dsafigure}
+	\centering
+	\includegraphics[width=4cm]{Orbital_3A1.png}
+	\caption{HOMO des $NH_3$ \cite{ADF2017authors}.}
+	\label{homo}
+\end{dsafigure}
+
+\begin{dsafigure}
+	\centering
+	\includegraphics[width=4cm]{Orbital_4A1.png}
+	\caption{LUMO des $NH_3$ \cite{ADF2017authors}.}
+	\label{lumo}
+\end{dsafigure}
+
+\subsection{Hybridisierung versus Molekülorbitaltheorie}
+
+\input{subsecs/HybridisierungMethan}
